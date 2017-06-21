@@ -98,7 +98,7 @@
                 </event-block>
                 <event-block sid="932293180572042">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="614934519813815" type="ButtonActionOk" />
+                        <condition id="0" name="On clicked" sid="614934519813815" type="ButtonOk" />
                     </conditions>
                     <actions>
                         <action id="-4" name="Set layer visible" sid="981602416464865" type="System">
@@ -112,7 +112,7 @@
                 </event-block>
                 <event-block sid="297532553327019">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="111406943031806" type="ButtonActionCancel" />
+                        <condition id="0" name="On clicked" sid="111406943031806" type="ButtonCancel" />
                     </conditions>
                     <actions>
                         <action id="0" name="Clear" sid="926260069549509" type="ArrayPeopleToMission" />

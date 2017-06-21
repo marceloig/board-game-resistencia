@@ -102,7 +102,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ButtonActionOk" uid="24">
+                <instance type="ButtonOk" uid="24">
                     <properties>
                         <type>Button</type>
                         <text>OK</text>
@@ -126,7 +126,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="ButtonActionCancel" uid="25">
+                <instance type="ButtonCancel" uid="25">
                     <properties>
                         <type>Button</type>
                         <text>Cancel</text>

@@ -60,7 +60,7 @@
                 </event-block>
                 <event-block sid="838917354764874">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="221243136445622" type="ButtonActionOk" />
+                        <condition id="0" name="On clicked" sid="221243136445622" type="ButtonOk" />
                     </conditions>
                     <actions>
                         <action id="2" name="Set visible" sid="286863035984526" type="ButtonBack">

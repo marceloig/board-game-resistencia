@@ -58,17 +58,15 @@
         <object-type name="ButtonStart" sid="708682874768605">
             <plugin id="Button" />
         </object-type>
-        <object-type name="TextLabelQtdPeople" sid="492339578349681">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="TextBoxQtdPeople" sid="714195445726821">
             <plugin id="TextBox" />
+            <instance-variables>
+                <instance-variable name="QUANTITY_MIN" sid="824902079635309" type="number" />
+                <instance-variable name="QUANTITY_MAX" sid="104905103950016" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="ButtonQtdPeople" sid="515165155960023">
             <plugin id="Button" />
-        </object-type>
-        <object-type name="TextPeopleName" sid="460777687928571">
-            <plugin id="Text" />
         </object-type>
         <object-type name="TextBoxPeopleName" sid="948858896275821">
             <plugin id="TextBox" />
@@ -204,10 +202,10 @@
         <object-type name="ButtonConfirmPeopleToMission" sid="869778764733714">
             <plugin id="Button" />
         </object-type>
-        <object-type name="ButtonActionOk" sid="190972835976695">
+        <object-type name="ButtonOk" sid="190972835976695">
             <plugin id="Button" />
         </object-type>
-        <object-type name="ButtonActionCancel" sid="483296052359699">
+        <object-type name="ButtonCancel" sid="483296052359699">
             <plugin id="Button" />
         </object-type>
         <object-type name="TextAction" sid="131011394924647">

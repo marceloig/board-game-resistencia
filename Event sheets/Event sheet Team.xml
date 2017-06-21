@@ -15,6 +15,10 @@
                 <event-block sid="934559303193553">
                     <conditions>
                         <condition id="0" name="On clicked" sid="120777043691865" type="ButtonPeopleName" />
+                        <condition id="-5" name="Compare width" sid="264527117623272" type="TextBoxPeopleName">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-11" name="Subtract from" sid="140206564556255" type="System">
@@ -154,6 +158,16 @@
                 <event-block sid="974777125193231">
                     <conditions>
                         <condition id="0" name="On clicked" sid="748331125666226" type="ButtonQtdPeople" />
+                        <condition id="-7" name="Compare instance variable" sid="796677672264503" type="TextBoxQtdPeople">
+                            <param id="0" name="Instance variable">QUANTITY_MAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">int(TextBoxQtdPeople.Text)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="105911255583056" type="TextBoxQtdPeople">
+                            <param id="0" name="Instance variable">QUANTITY_MIN</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">int(TextBoxQtdPeople.Text)</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="113982633767108" type="System">
