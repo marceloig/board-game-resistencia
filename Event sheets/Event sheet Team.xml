@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Team</name>
+    <events>
+        <variable constant="1" name="SPY" sid="255612858567895" static="0" type="text">SPY</variable>
+        <variable constant="1" name="RESISTANCE" sid="994798968030264" static="0" type="text">RESISTANCE</variable>
+        <variable constant="0" name="qtd_spy" sid="675690491330219" static="0" type="number">0</variable>
+        <variable constant="0" name="qtd_resistance" sid="924003841763637" static="0" type="number">0</variable>
+        <variable constant="0" name="people_name" sid="615050412463449" static="0" type="text"></variable>
+        <variable constant="0" name="qtd_peoples" sid="644013609855338" static="0" type="number">0</variable>
+        <event-group description="" sid="482002820717563" title="Group Layout Team">
+            <sub-events>
+                <variable constant="0" name="team" sid="995556064163553" static="0" type="text"></variable>
+                <event-block sid="934559303193553">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="120777043691865" type="ButtonPeopleName" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="140206564556255" type="System">
+                            <param id="0" name="Variable">qtd_peoples</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="865285806575076" type="System">
+                            <param id="0" name="Variable">people_name</param>
+                            <param id="1" name="Value">TextBoxPeopleName.Text</param>
+                        </action>
+                        <action id="0" name="Call function" sid="232831233856742" type="Function">
+                            <param id="0" name="Name">&quot;FunctionRandomTeam&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="129450919645059" type="System">
+                            <param id="0" name="Layout">Layout Choosed Team</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="201431894345902">
+                    <conditions>
+                        <condition id="0" name="On function" sid="343396093921041" type="Function">
+                            <param id="0" name="Name">&quot;FunctionRandomTeam&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="186590450903188" type="System">
+                            <param id="0" name="Variable">team</param>
+                            <param id="1" name="Value">choose(SPY,RESISTANCE)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="572250452478072">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="175394900313544" type="System">
+                                    <param id="0" name="Variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESISTANCE</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="165588261059663" type="System">
+                                    <param id="0" name="Variable">qtd_resistance</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="531718009947032" type="DictionaryPeopleTeams">
+                                    <param id="0" name="Key">people_name</param>
+                                    <param id="1" name="Value">SPY</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="782982886560007" type="System">
+                                    <param id="0" name="Variable">qtd_spy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="551357717837106">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="772491999338616" type="System">
+                                    <param id="0" name="Variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RESISTANCE</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="854341179492745" type="System">
+                                    <param id="0" name="Variable">qtd_resistance</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="621529433352016" type="DictionaryPeopleTeams">
+                                    <param id="0" name="Key">people_name</param>
+                                    <param id="1" name="Value">RESISTANCE</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="333580469043343" type="System">
+                                    <param id="0" name="Variable">qtd_resistance</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="377347582890987">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="589918528484599" type="System">
+                                    <param id="0" name="Variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">SPY</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="779230644427062" type="System">
+                                    <param id="0" name="Variable">qtd_spy</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="670315388640180" type="DictionaryPeopleTeams">
+                                    <param id="0" name="Key">people_name</param>
+                                    <param id="1" name="Value">RESISTANCE</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="989750548235378" type="System">
+                                    <param id="0" name="Variable">qtd_resistance</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="803294935797189">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="486965640376515" type="System">
+                                    <param id="0" name="Variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">SPY</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="895295926231268" type="System">
+                                    <param id="0" name="Variable">qtd_spy</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="205352887360542" type="DictionaryPeopleTeams">
+                                    <param id="0" name="Key">people_name</param>
+                                    <param id="1" name="Value">SPY</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="535110773545127" type="System">
+                                    <param id="0" name="Variable">qtd_spy</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="657087046510665" title="Group Layout Quantity of Peoples">
+            <sub-events>
+                <variable constant="0" name="qtd_spy_" sid="274466441970296" static="0" type="text"></variable>
+                <variable constant="0" name="qtd_resistance_" sid="266391368180193" static="0" type="text"></variable>
+                <event-block sid="974777125193231">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="748331125666226" type="ButtonQtdPeople" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="113982633767108" type="System">
+                            <param id="0" name="Variable">qtd_peoples</param>
+                            <param id="1" name="Value">TextBoxQtdPeople.Text</param>
+                        </action>
+                        <action id="0" name="Add key" sid="361510852424204" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;qtd_peoples&quot;</param>
+                            <param id="1" name="Value">qtd_peoples</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="989379061954126" type="System">
+                            <param id="0" name="Variable">qtd_resistance_</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  qtd_peoples &amp;&quot;&apos;]/resistance/text()&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="238510907406666" type="System">
+                            <param id="0" name="Variable">qtd_spy_</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/teams/team[@quantity=&apos;&quot;&amp; qtd_peoples  &amp;&quot;&apos;]/spy/text()&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="801006012510910" type="System">
+                            <param id="0" name="Variable">qtd_resistance</param>
+                            <param id="1" name="Value">int(qtd_resistance_)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="326082990773329" type="System">
+                            <param id="0" name="Variable">qtd_spy</param>
+                            <param id="1" name="Value">int(qtd_spy_)</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="423620885865290" type="System">
+                            <param id="0" name="Layout">Layout Team</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Choosed Team</name>
+    <events>
+        <event-group description="" sid="224910275618112" title="Group Layout Choosed Team">
+            <sub-events>
+                <event-block sid="450191906144446">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="563901841602066" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="674667966682871" type="TextChoosedTeam">
+                            <param id="0" name="Text">DictionaryPeopleTeams.Get(people_name)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311769851969662">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="176777261598655" type="ButtonBack" />
+                        <condition id="-14" name="Compare variable" sid="307501067817003" type="System">
+                            <param id="0" name="Variable">qtd_peoples</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="161219854724705" type="System">
+                            <param id="0" name="Layout">Layout Team</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="298246266599754">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="584534338824862" type="ButtonBack" />
+                        <condition id="-14" name="Compare variable" sid="622263103824379" type="System">
+                            <param id="0" name="Variable">qtd_peoples</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="186374099344134" type="System">
+                            <param id="0" name="Layout">Layout Missions</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet End Game</name>
+    <events>
+        <event-group description="" sid="774806710578879" title="Group Layout End Game">
+            <sub-events>
+                <event-block sid="422289030030103">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="380539106877662" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="481151325956482">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="454150498622491" type="DictionaryProperties">
+                                    <param id="0" name="Key">&quot;resistance_victories&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="618469020663454" type="TextLabel">
+                                    <param id="0" name="Text">&quot;Vitoria da Resistencia&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="197997856179722">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="858346734510622" type="DictionaryProperties">
+                                    <param id="0" name="Key">&quot;spy_victories&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="192266665607324" type="TextLabel">
+                                    <param id="0" name="Text">&quot;Vitoria dos Espiões&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="308596960832491">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="648748416013731" type="ButtonBack" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="991194449302993" type="DictionaryPeopleTeams" />
+                        <action id="3" name="Clear" sid="859362176080459" type="DictionaryProperties" />
+                        <action id="-45" name="Reset persisted objects" sid="354313679043543" type="System" />
+                        <action id="-2" name="Go to layout" sid="275837194749671" type="System">
+                            <param id="0" name="Layout">Layout Quantity of Peoples</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

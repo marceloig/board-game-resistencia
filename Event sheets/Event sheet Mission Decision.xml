@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Mission Decision</name>
+    <events>
+        <variable constant="0" name="index" sid="473199105889715" static="0" type="number">0</variable>
+        <event-group description="" sid="112050057648075" title="Group Layout Mission Decision">
+            <sub-events>
+                <variable constant="0" name="acc_fail" sid="913735970695807" static="0" type="number">0</variable>
+                <variable constant="0" name="acc_success" sid="999448956732857" static="0" type="number">0</variable>
+                <event-block sid="503198773805807">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="426789136996505" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="735775786097419" type="SpriteFontPeopleToMission">
+                            <param id="0" name="Text">ArrayPeopleToMission.At(index)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="517639445223556" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;mission_success&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Add key" sid="134196413642731" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;mission_fail&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="481561227904619" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209857653686331">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="946935345079110" type="System">
+                            <param id="0" name="Variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">index</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="583510516341300" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="778606825123977" type="System">
+                            <param id="0" name="Layout">Layout Mission Result</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="852346244722041">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="638059075008613" type="Touch">
+                            <param id="0" name="Object">SpriteMissionSuccess</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="204055104617235" type="System">
+                            <param id="0" name="Variable">acc_success</param>
+                            <param id="1" name="Value">DictionaryProperties.Get(&quot;mission_success&quot;)</param>
+                        </action>
+                        <action id="1" name="Set key" sid="555334942441171" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;mission_success&quot;</param>
+                            <param id="1" name="Value">acc_success + 1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="345308186929176" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="115265319997137" type="SpriteFontPeopleToMission">
+                            <param id="0" name="Text">ArrayPeopleToMission.At(index)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="966710466205752">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="252960496290710" type="Touch">
+                            <param id="0" name="Object">SpriteMissionFail</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="747082846914732" type="System">
+                            <param id="0" name="Variable">acc_fail</param>
+                            <param id="1" name="Value">DictionaryProperties.Get(&quot;mission_fail&quot;)</param>
+                        </action>
+                        <action id="1" name="Set key" sid="786851425119691" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;mission_fail&quot;</param>
+                            <param id="1" name="Value">acc_fail + 1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="759159549780557" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="342253651083105" type="SpriteFontPeopleToMission">
+                            <param id="0" name="Text">ArrayPeopleToMission.At(index)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Choose Team to Mission</name>
+    <events>
+        <event-group description="" sid="273922185879277" title="Group Choose Team to Mission">
+            <sub-events>
+                <variable constant="0" name="CoordinateX" sid="367786342229263" static="0" type="number">0</variable>
+                <variable constant="0" name="CoordinateY" sid="104600022798396" static="0" type="number">0</variable>
+                <event-block sid="420364073577591">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="802196477356997" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="560244908097485" type="System">
+                            <param id="0" name="Variable">CoordinateX</param>
+                            <param id="1" name="Value">SpriteFontPeopleToMission.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="489088735544388" type="System">
+                            <param id="0" name="Variable">CoordinateY</param>
+                            <param id="1" name="Value">SpriteFontPeopleToMission.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="135220330551913" type="SpriteFontPeopleToMission" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="212737630710002">
+                            <conditions>
+                                <condition id="1" name="For each key" sid="652382728577382" type="DictionaryPeopleTeams" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="742043355456411" type="System">
+                                    <param id="0" name="Variable">CoordinateY</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="173947558288142" type="System">
+                                    <param id="0" name="Object to create">SpriteFontPeopleToMission</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">CoordinateX</param>
+                                    <param id="3" name="Y">CoordinateY</param>
+                                </action>
+                                <action id="0" name="Set text" sid="725804521901998" type="SpriteFontPeopleToMission">
+                                    <param id="0" name="Text">DictionaryPeopleTeams.CurrentKey</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="648346878463200">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="457750359362861" type="Touch">
+                            <param id="0" name="Object">SpriteFontPeopleToMission</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="447728211663059">
+                            <conditions>
+                                <condition id="5" name="Contains value" sid="390511331228715" type="ArrayPeopleToMission">
+                                    <param id="0" name="Value">SpriteFontPeopleToMission.Text</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Delete" sid="137097211337917" type="ArrayPeopleToMission">
+                                    <param id="0" name="Index">ArrayPeopleToMission.IndexOf(SpriteFontPeopleToMission.Text)</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="713297654097028">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="810288545252884" type="System" />
+                                <condition id="7" name="Compare size" sid="957148622723508" type="ArrayPeopleToMission">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">qtd_peoples_to_mission</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="904561416598840" type="ArrayPeopleToMission">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Value">SpriteFontPeopleToMission.Text</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="994610178378648">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="640246563667373" type="ButtonConfirmPeopleToMission" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="770918214820542" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="932293180572042">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="614934519813815" type="ButtonActionOk" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="981602416464865" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="226165830963796" type="System">
+                            <param id="0" name="Layout">Layout Mission Decision</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297532553327019">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="111406943031806" type="ButtonActionCancel" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="926260069549509" type="ArrayPeopleToMission" />
+                        <action id="1" name="Set size" sid="283497169308339" type="ArrayPeopleToMission">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="567212918368998" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="639218437980799">
+                    <conditions>
+                        <condition id="7" name="Compare size" sid="105759981593805" type="ArrayPeopleToMission">
+                            <param id="0" name="Axis">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">qtd_peoples_to_mission</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="861273798075601" type="ButtonConfirmPeopleToMission">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="696402691992056">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="640227750041109" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="595304750973854" type="ButtonConfirmPeopleToMission">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

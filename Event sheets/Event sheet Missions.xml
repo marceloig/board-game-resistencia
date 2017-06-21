@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Missions</name>
+    <events>
+        <variable constant="0" name="qtd_peoples_to_mission" sid="987678301984981" static="0" type="number">0</variable>
+        <event-group description="" sid="473352918096619" title="Group Layout Missions">
+            <sub-events>
+                <event-block sid="516552157295279">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="546054263826988" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="510484881713641" type="SpriteMissionOne">
+                            <param id="0" name="Instance variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">XML.NumberValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  DictionaryProperties.Get(&quot;qtd_peoples&quot;) &amp;&quot;&apos;]/missions/mission[@number=&apos;1&apos;]/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="947249688258656" type="SpriteMissionTwo">
+                            <param id="0" name="Instance variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">XML.NumberValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  DictionaryProperties.Get(&quot;qtd_peoples&quot;) &amp;&quot;&apos;]/missions/mission[@number=&apos;2&apos;]/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="434340227331634" type="SpriteMissionThree">
+                            <param id="0" name="Instance variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">XML.NumberValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  DictionaryProperties.Get(&quot;qtd_peoples&quot;) &amp;&quot;&apos;]/missions/mission[@number=&apos;3&apos;]/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="279983523436401" type="SpriteMissionFour">
+                            <param id="0" name="Instance variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">XML.NumberValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  DictionaryProperties.Get(&quot;qtd_peoples&quot;) &amp;&quot;&apos;]/missions/mission[@number=&apos;4&apos;]/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="326906960861723" type="SpriteMissionFive">
+                            <param id="0" name="Instance variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">XML.NumberValue(&quot;/teams/team[@quantity=&apos;&quot;&amp;  DictionaryProperties.Get(&quot;qtd_peoples&quot;) &amp;&quot;&apos;]/missions/mission[@number=&apos;5&apos;]/text()&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="100396574849385">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="784081495705060" type="DictionaryProperties">
+                                    <param id="0" name="Key">&quot;mission&quot;</param>
+                                </condition>
+                                <condition id="-34" name="Pick by evaluate" sid="430665157569425" type="System">
+                                    <param id="0" name="Object">FamilySpriteMission</param>
+                                    <param id="1" name="Expression">FamilySpriteMission.mission = DictionaryProperties.Get(&quot;mission&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="391586139069858" type="FamilySpriteMission">
+                                    <param id="0" name="Instance variable">completed</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="215424812187313" type="FamilySpriteMission">
+                                    <param id="0" name="Instance variable">mission_result</param>
+                                    <param id="1" name="Value">DictionaryProperties.Get(&quot;mission_result&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="112586042969482">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="931460557894404" type="Touch">
+                            <param id="0" name="Object">FamilySpriteMission</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="307837275671174" type="FamilySpriteMission">
+                            <param id="0" name="Instance variable">completed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="335960846785282" type="System">
+                            <param id="0" name="Layout">Layout Choose Team to Mission</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="538313734632700" type="System">
+                            <param id="0" name="Variable">qtd_peoples_to_mission</param>
+                            <param id="1" name="Value">FamilySpriteMission.qtd_peoples_to_mission</param>
+                        </action>
+                        <action id="0" name="Add key" sid="964084098382644" type="DictionaryProperties">
+                            <param id="0" name="Key">&quot;mission&quot;</param>
+                            <param id="1" name="Value">FamilySpriteMission.mission</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

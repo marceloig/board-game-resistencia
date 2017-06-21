@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Resistencia</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>Igor Marcelo</author>
+    <author-email>igmarcelo@outook.com</author-email>
+    <author-website>http://</author-website>
+    <app-id>com.oliveira.resistencia</app-id>
+    <unique-id>3fdo76k6lqnea</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TextTitle" sid="157785532119996">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ButtonStart" sid="708682874768605">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TextLabelQtdPeople" sid="492339578349681">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBoxQtdPeople" sid="714195445726821">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="ButtonQtdPeople" sid="515165155960023">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TextPeopleName" sid="460777687928571">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBoxPeopleName" sid="948858896275821">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="ButtonPeopleName" sid="328468122482709">
+            <plugin id="Button" />
+        </object-type>
+        <object-type global="1" name="DictionaryPeopleTeams" sid="296012910725732">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type global="1" name="XML" sid="287785293926557">
+            <plugin id="XML" />
+        </object-type>
+        <object-type name="AJAX" sid="393093124362673">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Function" sid="885233127533981">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="TextChoosedTeam" sid="998105509287211">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ButtonBack" sid="556570252918205">
+            <plugin id="Button" />
+        </object-type>
+        <object-type global="1" name="DictionaryProperties" sid="307963583281846">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="SpriteMissionOne" sid="796981322184426">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886102094838920" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Shooting Gallery (110 assets)\PNG\HUD\text_1.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.142857" />
+                            <point x="0.5" y="0.0178571" />
+                            <point x="0.875" y="0.0714286" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.84375" y="0.910714" />
+                            <point x="0.5" y="0.964286" />
+                            <point x="0.21875" y="0.875" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteMissionTwo" sid="534435443977778">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247335296089842" speed="5">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Shooting Gallery (110 assets)\PNG\HUD\text_2.png">
+                        <collision-poly>
+                            <point x="0.139535" y="0.107143" />
+                            <point x="0.488372" y="0" />
+                            <point x="0.883721" y="0.0892857" />
+                            <point x="0.860465" y="0.5" />
+                            <point x="0.953488" y="0.964286" />
+                            <point x="0.488372" y="0.982143" />
+                            <point x="0.139535" y="0.892857" />
+                            <point x="0.209302" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteMissionThree" sid="711065964865201">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719016796929425" speed="5">
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Shooting Gallery (110 assets)\PNG\HUD\text_3.png">
+                        <collision-poly>
+                            <point x="0.097561" y="0.0714286" />
+                            <point x="0.487805" y="0.0178571" />
+                            <point x="0.853659" y="0.107143" />
+                            <point x="0.853659" y="0.892857" />
+                            <point x="0.487805" y="0.982143" />
+                            <point x="0.146341" y="0.892857" />
+                            <point x="0.195122" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteMissionFour" sid="261281903387691">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618039367528855" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Shooting Gallery (110 assets)\PNG\HUD\text_4.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.214286" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.844444" y="0.125" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="0.777778" y="0.821429" />
+                            <point x="0.488889" y="0.946429" />
+                            <point x="0.288889" y="0.767857" />
+                            <point x="0.0444444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteMissionFive" sid="767693514594287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976573466960731" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Shooting Gallery (110 assets)\PNG\HUD\text_5.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.105263" />
+                            <point x="0.5" y="0.0526316" />
+                            <point x="0.904762" y="0.0701754" />
+                            <point x="0.952381" y="0.491228" />
+                            <point x="0.857143" y="0.894737" />
+                            <point x="0.5" y="0.982456" />
+                            <point x="0.142857" y="0.894737" />
+                            <point x="0.0714286" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="494686696333570">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="SpriteFontPeopleToMission" sid="174719864213097">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type global="1" name="ArrayPeopleToMission" sid="839880859863419">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="ButtonConfirmPeopleToMission" sid="869778764733714">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ButtonActionOk" sid="190972835976695">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ButtonActionCancel" sid="483296052359699">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TextAction" sid="131011394924647">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteMissionSuccess" sid="549867882688289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547011499593870" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteMissionFail" sid="464563151990057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426985323284868" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextLabel" sid="581539958162699">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="FamilySpriteMission" plugin-id="Sprite" sid="737440352497941">
+            <members>
+                <member>SpriteMissionFive</member>
+                <member>SpriteMissionFour</member>
+                <member>SpriteMissionOne</member>
+                <member>SpriteMissionThree</member>
+                <member>SpriteMissionTwo</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="completed" sid="424105473939463" type="boolean" />
+                <instance-variable name="qtd_peoples_to_mission" sid="549395613853183" type="number" />
+                <instance-variable name="mission_result" sid="101772617627948" type="string" />
+                <instance-variable name="mission" sid="384492795981774" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="843321473657826">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout Start Game.xml</layout>
+        <layout>Layout Quantity of Peoples.xml</layout>
+        <layout>Layout Team.xml</layout>
+        <layout>Layout Choosed Team.xml</layout>
+        <layout>Layout Missions.xml</layout>
+        <layout>Layout Choose Team to Mission.xml</layout>
+        <layout>Layout Mission Decision.xml</layout>
+        <layout>Layout Mission Result.xml</layout>
+        <layout>Layout End Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet Start Game.xml</event-sheet>
+        <event-sheet>Event sheet Team.xml</event-sheet>
+        <event-sheet>Event sheet Missions.xml</event-sheet>
+        <event-sheet>Event sheet Choose Team to Mission.xml</event-sheet>
+        <event-sheet>Event sheet Choosed Team.xml</event-sheet>
+        <event-sheet>Event sheet Mission Decision.xml</event-sheet>
+        <event-sheet>Event sheet Mission Result.xml</event-sheet>
+        <event-sheet>Event sheet End Game.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="AJAX" uid="10" />
+        <global-instance type="Function" uid="11" />
+        <global-instance type="Touch" uid="20">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
